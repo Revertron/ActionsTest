@@ -1,0 +1,17 @@
+name: Build packages
+
+on:
+  release:
+    types: [ created ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Echo
+      run: echo "Release has been created!"
